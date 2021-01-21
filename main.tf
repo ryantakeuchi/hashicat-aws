@@ -124,8 +124,8 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
-    owner = "${var.owner-name}"
-    TTL = "${var.ttl}"
+    owner = var.owner-name
+    TTL = var.ttl
   }
 }
 
