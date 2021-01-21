@@ -128,7 +128,6 @@ resource "aws_instance" "hashicat" {
     TTL = var.ttl
   }
 }
-# -------- added owner and ttl tags to resource ---------
 
 # We're using a little trick here so we can run the provisioner without
 # destroying the VM. Do not do this in production.
