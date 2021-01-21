@@ -1,5 +1,4 @@
 provider "aws" {
-  version = "~> 3.0"
   region  = var.region
 }
 
@@ -9,7 +8,7 @@ resource "aws_vpc" "hashicat" {
 
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
-    environment = "Production"
+    environment = "demo"
   }
 }
 
@@ -125,6 +124,8 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    owner = "${var.owner-name}"
+    TTL = "${var.ttl}"
   }
 }
 
