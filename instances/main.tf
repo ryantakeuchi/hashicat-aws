@@ -8,7 +8,7 @@ resource "aws_vpc" "hashicat" {
 
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
-    environment = "rt-demo-2"
+    environment = "rt-demo"
   }
 }
 
